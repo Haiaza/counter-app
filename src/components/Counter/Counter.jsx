@@ -23,6 +23,15 @@ const doubleDecrement = (decrementValue) => {
     setValue(newValue);
     }
 
+    const plusHundred = () => {
+    const newValue = value + 100;
+    setValue(newValue)
+    }
+
+    // const [prevNum , setPrevNum] = useState(value)
+    
+    // const pastNumber = (value)
+
 
     return (
         <div>
@@ -60,7 +69,20 @@ const doubleDecrement = (decrementValue) => {
         symbol="2xv"
     />
                 </div>
-                
+                <hr />
+                <div>
+                    <Button action={() => 
+                        plusHundred(document.getElementById("number").value)
+    }
+        symbol="100"
+    />
+    <Button action={() => 
+                        reset(document.getElementById("number").value)
+    }
+        symbol="0"
+    />
+    
+                </div>
             </div>
         </div>
     );
