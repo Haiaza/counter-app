@@ -18,6 +18,10 @@ const doubleDecrement = (decrementValue) => {
     setValue(newValue);
     }
 
+    const handleReset = () => {
+    setValue(0)
+    }
+
     const doubleIncrement = (incrementValue) => {
     const newValue = value + parseInt(incrementValue * 2, 10);
     setValue(newValue);
@@ -27,6 +31,7 @@ const doubleDecrement = (decrementValue) => {
     const newValue = value + 100;
     setValue(newValue)
     }
+
 
     // const [prevNum , setPrevNum] = useState(value)
     
@@ -77,9 +82,9 @@ const doubleDecrement = (decrementValue) => {
         symbol="100"
     />
     <Button action={() => 
-                        reset(document.getElementById("number").value)
+                        handleReset(document.getElementById("number").value)
     }
-        symbol="0"
+        symbol="Reset"
     />
     
                 </div>
