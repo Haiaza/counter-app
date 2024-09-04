@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
+import './Counter.css'
 
 function Counter() {
     const [value, setValue] = useState(0);
@@ -39,7 +40,7 @@ const doubleDecrement = (decrementValue) => {
 
 
     return (
-        <div>
+        <div className="bigContainer">
             <h1>Please 
                 <span style={{ color: value > 200 ? "green" : "white" }}> Add </span>
                 or 
