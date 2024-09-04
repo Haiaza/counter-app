@@ -33,6 +33,13 @@ const doubleDecrement = (decrementValue) => {
     setValue(newValue)
     }
 
+    // const [currentInput, setInput] = useState(currentInput)
+
+    const something = (currentInput) => {
+        const increasedValue = currentInput + 50
+        setInput(increasedValue)
+    }
+
 
     // const [prevNum , setPrevNum] = useState(value)
     
@@ -56,20 +63,21 @@ const doubleDecrement = (decrementValue) => {
             }
                 symbol="+"
             />
-                    <Button 
-                        action={() =>
-                            doubleIncrement(document.getElementById("number").value)
-            }
-                symbol="2x^"
-            />
-            <div className="value-form">
-                <input type="number" id="number" defaultValue="0" />
-            </div>
             <Button
                 action={() =>
                     handleDecrement(document.getElementById("number").value)
             }
                 symbol="-"
+            />        
+            <div className="value-form">
+                <input type="number" id="number" defaultValue="0" />
+            </div>
+            
+            <Button 
+                        action={() =>
+                            doubleIncrement(document.getElementById("number").value)
+            }
+                symbol="2x^"
             />
             <Button 
                 action={() =>
@@ -77,18 +85,25 @@ const doubleDecrement = (decrementValue) => {
     }
         symbol="2xv"
     />
+
+            <Button
+                action={() => something(document.getElementById("number"))
+    }
+        symbol={"+50 Input"}
+    />
+    
                 </div>
                 <hr />
                 <div>
                     <Button action={() => 
                         plusHundred(document.getElementById("number").value)
     }
-        symbol="100"
+        symbol="+100"
     />
     <Button action={() => 
                         handleReset(document.getElementById("number").value)
     }
-        symbol="Reset"
+        symbol="Reset Value"
     />
     
                 </div>
