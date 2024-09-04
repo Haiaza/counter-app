@@ -40,7 +40,10 @@ const doubleDecrement = (decrementValue) => {
 
     return (
         <div>
-            <h1>Please Add or Subtract</h1>
+            <h1>Please 
+                <span style={{ color: value > 200 ? "green" : "white" }}> Add </span>
+                or 
+                <span style={{ color: value < -200 ? "red" : "white" }}> Subtract</span></h1>
             <div className="board">
                 <div id="value" style={{ color: value < 0 ? "red" : "black" }}>
                     {value}
